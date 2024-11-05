@@ -288,6 +288,8 @@ class DatePickerInstance {
         const button = document.createElement('button');
         button.type = 'button';
         button.classList.add('btn', 'btn-secondary', 'mb-2');
+        button.style.display = 'block';
+        button.style.marginLeft = 'auto'
         const nextCalendar = this.getNextCalendar();
         button.textContent = `${localizationObject[this.locale].switchTo} ${localizationObject[this.locale][nextCalendar].label}`;
         button.addEventListener('click', () => this.toggleCalendar(button));
@@ -322,13 +324,19 @@ class DatePickerInstance {
         const yearSelect = this.createYearSelect(date);
 
         const selectsContainer = document.createElement('div');
-        selectsContainer.classList.add('d-flex', 'align-items-center');
         selectsContainer.appendChild(monthSelect);
         selectsContainer.appendChild(yearSelect);
+        selectsContainer.classList.add('d-flex', 'align-items-center');
 
-        header.appendChild(prevButton);
+        const monthNavContainer = document.createElement('div');
+        monthNavContainer.appendChild(prevButton);
+        monthNavContainer.appendChild(nextButton)
         header.appendChild(selectsContainer);
-        header.appendChild(nextButton);
+        header.appendChild(monthNavContainer);
+        monthNavContainer.classList.add('d-flex', 'align-items-center');        
+        monthNavContainer.style.gap = '0.3rem'
+        // header.appendChild(prevButton);
+        // header.appendChild(nextButton);
 
         return header;
     }

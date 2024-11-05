@@ -21,9 +21,9 @@ html {
 }
 
 #date-picker {
-    border: 1px solid #9DA4AE !important;
     border-radius: 4px;
-    padding: 8px;
+    padding: 12px;
+    border: 1px solid #9da4ae !important;
 }
 
 /* Datepicker Open Button */
@@ -53,7 +53,7 @@ html {
 .modal.fade {
     display: block;
     position: relative;
-    max-width: 424px;
+    max-width: 471px;
     padding: 20px;
     border-radius: 12px;
     background-color: #fff;
@@ -79,11 +79,13 @@ html {
 }
 
 .calendar-header .btn {
-    background: none;
-    border: 1px solid #19184E !important;
     cursor: pointer;
-    font-size: 15px;
     color: #333;
+    background: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.5rem;
+    border: 1px solid #19184e !important;
 }
 
 .calendar-header .btn:hover {
@@ -220,6 +222,8 @@ input[data-datepicker="true"]::placeholder {
 
 /* Secondary Button Styles */
 .btn-secondary {
+    margin-left: auto !important ;
+    display: block;
     background-color: #3C878B !important;
     border: unset !important;
 }
@@ -264,7 +268,7 @@ button:focus {
 
 
 .btn.btn-link.focused.selected {
-    
+
     color: #FFF !important;
     background-color: #19184E;
     border: unset !important
