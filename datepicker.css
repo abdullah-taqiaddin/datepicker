@@ -165,8 +165,11 @@ html {
     color: white !important;
     border: none !important;
 }
+.cell.today:hover {
+    color: white !important;
+    border: none !important;
+}
 
-.cell.today button:focus,
 .cell.today button:active,
 .cell.today button:focus-visible {
     width: 40px;
